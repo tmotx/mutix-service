@@ -78,7 +78,7 @@ function getInfo(action) {
       return {
         serviceInfoTitle: '同步口譯服務',
         serviceInfoSubTitle: '服務內容',
-        serviceInfoTitleDesc: '提供 auXala 同步口譯服務，並可代為安排英日語口譯員。<br />（本服務不僅限於 Cymking Space 使用）',
+        serviceInfoTitleDesc: '提供 auXala 同步口譯服務，並可代為安排英日語口譯員。',
         serviceInfoText: ['中(英/日)雙語，獨立雙頻道', '專業口譯台 + 耳機麥克風（同時可由 2 位口譯員輪替）', '現場會眾最大收聽數 100 台'],
         serviceInfoBG: ['translation01.jpg', 'translation02.jpg']
       }
@@ -86,7 +86,7 @@ function getInfo(action) {
       return {
         serviceInfoTitle: '專業直播服務',
         serviceInfoSubTitle: '服務內容',
-        serviceInfoTitleDesc: '提供專業 OBS 專業直播服務，並可代為安排錄影及音控團隊。<br />（本服務不僅限於 Cymking Space 使用）',
+        serviceInfoTitleDesc: '提供專業 OBS 專業直播服務，並可代為安排錄影及音控團隊。',
         serviceInfoText: ['簡報 + 攝影機 720p 字母畫面（現場需提供 HDMI 簡報訊號）', '提供 YouTube / Facebook / RTMP 最多同時兩個頻道', '加贈 USB 隨身碟（內含 1080p 錄影檔）'],
         serviceInfoBG: ['Live01.jpg', 'Live02.jpg']
       }
@@ -94,7 +94,7 @@ function getInfo(action) {
       return {
         serviceInfoTitle: '即時字幕／逐字稿服務',
         serviceInfoSubTitle: '服務內容',
-        serviceInfoTitleDesc: '提供 UDTalk 即時字幕服務，適合紀錄逐字稿。<br />（本服務不僅限於 Cymking Space 使用）',
+        serviceInfoTitleDesc: '提供 UDTalk 即時字幕服務，適合紀錄逐字稿。',
         serviceInfoText: ['現場語音錄音，並即時語音辨識轉為文字／字幕（需現場配合）'],
         serviceInfoBG: ['Transcript.jpg']
       }
@@ -117,9 +117,9 @@ function getInfo(action) {
       return {
         serviceInfoTitle: '會場網路服務',
         serviceInfoSubTitle: '服務內容',
-        serviceInfoTitleDesc: '提供 Ruckus 高密度無線網路服務，並可代為申請對外頻寬。<br />（於 Cymking Space 不需申請本服務，Cymking Space 已提供高速 Wifi ）',
+        serviceInfoTitleDesc: '提供 Ruckus 高密度無線網路服務，並可代為申請對外頻寬。',
         serviceInfoText: ['現場會眾最大連線數 500 台且最多 1 個會議空間', '有線及無線網路，單一設備最快 1Gbps', '協助申請 中華電信 臨時網路'],
-        serviceInfoBG: ['network_01.jpg', 'network_02.jpg']
+        serviceInfoBG: ['network_03.jpg']
       }
     default:
       return false
@@ -147,8 +147,8 @@ var PRICE_INFO_ARR = [
     title: '同步口譯',
     price: '12,000',
     items: [
-      '包含最多 100 位聽眾',
-      '包含 1 個頻道可由 2 位口譯員雙語切換'
+      '最多 100 位聽眾',
+      '1 個頻道可由 2 位口譯員雙語切換'
     ],
     itemPlus: [
       '最多 4 種頻道同步 4 種語言',
@@ -162,7 +162,7 @@ var PRICE_INFO_ARR = [
     items: [
       '最大 500Mb ps 對外頻寬',
       'WiFi 最大連線數 100 個裝置',
-      '包含 1 個最大 300 坪會議廳 與 1 個休息室'
+      'WiFi 最大涵蓋範圍 300 坪單一會議廳'
     ],
     itemPlus: [
       '最大 2Gbps 對外頻寬',

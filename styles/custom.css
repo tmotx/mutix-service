@@ -4,6 +4,11 @@ html {
   font-family: 'Microsoft JhengHei', '微軟正黑體','Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
+.pure-g [class*=pure-u] {
+  font-family: 'Microsoft JhengHei', '微軟正黑體','Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+
 body {
   background-color: #000000;
   font-size: 15px;
@@ -43,9 +48,17 @@ a:active {
 }
 
 
+/* 
+88b           d88             88          88 88             
+888b         d888             88          "" 88             
+88`8b       d8'88             88             88             
+88 `8b     d8' 88  ,adPPYba,  88,dPPYba,  88 88  ,adPPYba,  
+88  `8b   d8'  88 a8"     "8a 88P'    "8a 88 88 a8P_____88  
+88   `8b d8'   88 8b       d8 88       d8 88 88 8PP"""""""  
+88    `888'    88 "8a,   ,a8" 88b,   ,a8" 88 88 "8b,   ,aa  
+88     `8'     88  `"YbbdP"'  8Y"Ybbd8"'  88 88  `"Ybbd8"'                                                 
+*/
 
-
-/* =============================== LAYOUT Mobile =============================== */
 header .container {
   height: 50px;
   line-height: 50px;
@@ -534,7 +547,18 @@ h3 {
   cursor: pointer;
 }
 
-/* =============================== LAYOUT Tablet =============================== */
+/*                                                  
+888888888888       88          88                     
+     88            88          88              ,d     
+     88            88          88              88     
+     88 ,adPPYYba, 88,dPPYba,  88  ,adPPYba, MM88MMM  
+     88 ""     `Y8 88P'    "8a 88 a8P_____88   88     
+     88 ,adPPPPP88 88       d8 88 8PP"""""""   88     
+     88 88,    ,88 88b,   ,a8" 88 "8b,   ,aa   88,    
+     88 `"8bbdP"Y8 8Y"Ybbd8"'  88  `"Ybbd8"'   "Y888  
+*/
+
+
 @media screen and (min-width: 768px) {
 
   body {
@@ -633,7 +657,7 @@ h3 {
   }
 
   .price_info_block{
-    max-width: 350px;
+    max-width: 375px;
   }
 
   .price_info_title{
@@ -664,8 +688,16 @@ h3 {
 
 }
 
-
-/* =============================== LAYOUT PC =============================== */
+/*
+88888888ba    ,ad8888ba,   
+88      "8b  d8"'    `"8b  
+88      ,8P d8'            
+88aaaaaa8P' 88             
+88""""""'   88             
+88          Y8,            
+88           Y8a.    .a8P  
+88            `"Y8888Y"'                                                                                                            
+*/
 @media screen and (min-width: 1025px) {
   header {
     padding: 0px;
