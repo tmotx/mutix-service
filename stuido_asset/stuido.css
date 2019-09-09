@@ -493,8 +493,10 @@ h3 {
 }
 
 .section_info{
-  padding-top: 25px;
-  padding-bottom: 5px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 
@@ -504,21 +506,14 @@ h3 {
 }
 
 .info_item_img img{
-  width: auto;
-  height: 100px;;
+  width: 100%;
+  height: auto;
 }
-
-.info_item_text_box{
-  margin: 0 auto;
-}
-
 
 .info_item_text{
-  display: inline-block;
-  vertical-align: middle;
+  margin-top: 5px;
   font-size: 12px;
   font-weight: 600;
-  padding-right: 5%;
 }
 
 .why_title{
@@ -636,10 +631,13 @@ h3 {
     font-weight: 600;
   }
 
+  .section_info{
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
   .info_item_text{
-    height: 100px;
     font-size: 15px;
-    font-weight: 600;
   }
 
   .section_service {
