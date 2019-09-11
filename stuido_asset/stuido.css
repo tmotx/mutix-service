@@ -342,12 +342,12 @@ h3 {
 
 .service_item{
   margin-top: 40px;
-  text-align: center;
 }
 
 .service_item_img{
   width: 100%;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .service_item_img img{
