@@ -23,6 +23,11 @@ body {
   margin: 0 auto;
 }
 
+.anchor {
+  height: 50px;
+  margin: -50px 0 0;
+}
+
 .g-title {
   font-size: 25px;
   font-weight: 600;
@@ -48,15 +53,15 @@ a:active {
 }
 
 
-/* 
-88b           d88             88          88 88             
-888b         d888             88          "" 88             
-88`8b       d8'88             88             88             
-88 `8b     d8' 88  ,adPPYba,  88,dPPYba,  88 88  ,adPPYba,  
-88  `8b   d8'  88 a8"     "8a 88P'    "8a 88 88 a8P_____88  
-88   `8b d8'   88 8b       d8 88       d8 88 88 8PP"""""""  
-88    `888'    88 "8a,   ,a8" 88b,   ,a8" 88 88 "8b,   ,aa  
-88     `8'     88  `"YbbdP"'  8Y"Ybbd8"'  88 88  `"Ybbd8"'                                                 
+/*
+88b           d88             88          88 88
+888b         d888             88          "" 88
+88`8b       d8'88             88             88
+88 `8b     d8' 88  ,adPPYba,  88,dPPYba,  88 88  ,adPPYba,
+88  `8b   d8'  88 a8"     "8a 88P'    "8a 88 88 a8P_____88
+88   `8b d8'   88 8b       d8 88       d8 88 88 8PP"""""""
+88    `888'    88 "8a,   ,a8" 88b,   ,a8" 88 88 "8b,   ,aa
+88     `8'     88  `"YbbdP"'  8Y"Ybbd8"'  88 88  `"Ybbd8"'
 */
 
 header .container {
@@ -103,7 +108,7 @@ header ul li {
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: normal; 
+  letter-spacing: normal;
   margin-right: 2vw;
 }
 
@@ -206,8 +211,7 @@ h3 {
 }
 
 .section_service {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 }
 
 .service_menu {
@@ -547,15 +551,15 @@ h3 {
   cursor: pointer;
 }
 
-/*                                                  
-888888888888       88          88                     
-     88            88          88              ,d     
-     88            88          88              88     
-     88 ,adPPYYba, 88,dPPYba,  88  ,adPPYba, MM88MMM  
-     88 ""     `Y8 88P'    "8a 88 a8P_____88   88     
-     88 ,adPPPPP88 88       d8 88 8PP"""""""   88     
-     88 88,    ,88 88b,   ,a8" 88 "8b,   ,aa   88,    
-     88 `"8bbdP"Y8 8Y"Ybbd8"'  88  `"Ybbd8"'   "Y888  
+/*
+888888888888       88          88
+     88            88          88              ,d
+     88            88          88              88
+     88 ,adPPYYba, 88,dPPYba,  88  ,adPPYba, MM88MMM
+     88 ""     `Y8 88P'    "8a 88 a8P_____88   88
+     88 ,adPPPPP88 88       d8 88 8PP"""""""   88
+     88 88,    ,88 88b,   ,a8" 88 "8b,   ,aa   88,
+     88 `"8bbdP"Y8 8Y"Ybbd8"'  88  `"Ybbd8"'   "Y888
 */
 
 
@@ -564,12 +568,12 @@ h3 {
   body {
     font-size: 20px;
   }
-  
+
   header .logo {
     display: inline-block;
     height: 20px;
   }
-  
+
   header .title {
     display: inline-block;
     height: 20px;
@@ -601,7 +605,7 @@ h3 {
     margin-top: 200px;
     margin-bottom: 0px;
   }
-  
+
   .section_banner_title_2{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -629,12 +633,12 @@ h3 {
     margin-left: 2%;
   }
 
-  .service_info_sub {
-    margin-left: 2%;
+  .section_service {
+    padding-bottom: 80px;
   }
 
-  .section_price {
-    margin-top: 100px;
+  .service_info_sub {
+    margin-left: 2%;
   }
 
   .price_banner {
@@ -689,14 +693,14 @@ h3 {
 }
 
 /*
-88888888ba    ,ad8888ba,   
-88      "8b  d8"'    `"8b  
-88      ,8P d8'            
-88aaaaaa8P' 88             
-88""""""'   88             
-88          Y8,            
-88           Y8a.    .a8P  
-88            `"Y8888Y"'                                                                                                            
+88888888ba    ,ad8888ba,
+88      "8b  d8"'    `"8b
+88      ,8P d8'
+88aaaaaa8P' 88
+88""""""'   88
+88          Y8,
+88           Y8a.    .a8P
+88            `"Y8888Y"'
 */
 @media screen and (min-width: 1025px) {
   header {
