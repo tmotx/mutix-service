@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./service/styles/purecss-grids-responsive-min.css">
   <link rel="stylesheet" href="./studio_asset/studio.css?version=3">
 </head>
-<body onresize="resizeEvent()">
+<body>
 <header id="header">
   <div class="container">
     <img src="./service/images/stiudio_banner_logo.png" class="logo" />
@@ -218,28 +218,7 @@
 <footer>mutix Co., Ltd | <a href="mailto:studio@mutix.co">studio@mutix.co</a></footer>
 <div id="fb-root"></div>
 <div class="fb-customerchat" attribution="setup_tool" page_id="108775217137267" theme_color="#306c9b" logged_in_greeting="嗨~需要任何協助可以直接私訊我們！" logged_out_greeting="嗨~需要任何協助可以直接私訊我們！"></div>
-<script type="text/javascript" src="./studio_asset/studio.js?version=3"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145134850-3"></script>
-<script>
-/* GA */
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-145134850-3');
-/* FB messenger */
-window.fbAsyncInit = function() {
-  FB.init({
-    xfbml            : true,
-    version          : 'v4.0'
-  });
-};
-(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+<script async src="./studio_asset/studio.js?version=4"></script>
 </body>
 </html>
