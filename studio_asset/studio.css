@@ -417,6 +417,7 @@ footer {
   .price_info_block {
     float: none;
     display: inline-block;
+    width: 45%;
     max-width: 375px;
     margin: 0;
   }
