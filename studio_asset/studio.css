@@ -144,6 +144,9 @@ footer {
 
 .section_banner {
   margin-top: 50px;
+  padding-bottom: calc(100vw * 1200 / 754);
+  background: url("./images/754_studiobanner.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .section_banner img {
@@ -394,6 +397,11 @@ footer {
 */
 
 @media (min-width: 768px) {
+  .section_banner {
+    padding-bottom: calc(100vw * 1200 / 2560);
+    background-image: url("./images/2560_studiobanner.jpg")
+  }
+
   .tablet-up-display {
     display: block;
   }
