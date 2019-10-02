@@ -1,0 +1,43 @@
+@import "./color";
+
+$topbar-height: 50px;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: $topbar-height;
+  line-height: $topbar-height;
+  background-color: $black;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: $gray;
+    }
+  }
+}
+
+.header-logo {
+  height: 20px;
+}
+
+.header-menu ul {
+  display: flex;
+}
+
+.header-icon {
+  min-width: $topbar-height;
+  min-height: $topbar-height;
+  background: url("~/assets/images/icon-facebook.png") center no-repeat;
+  background-size: 80%;
+}

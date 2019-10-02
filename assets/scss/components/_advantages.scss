@@ -1,0 +1,159 @@
+@import "./size";
+@import "./color";
+
+.advantages {
+  padding: 50px 10%;
+
+  @media (min-width: $screen-md) {
+    padding: 50px 5%;
+  }
+
+  .title {
+    margin: 0 0 50px;
+
+    @media (min-width: $screen-md) {
+      text-align: center;
+    }
+  }
+}
+
+.advantage {
+  position: relative;
+  display: flex;
+  padding: 0 0 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    flex-shrink: 0;
+    width: 6px;
+    background: $white;
+
+    @media (min-width: $screen-md) {
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: $white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $screen-md) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    &:nth-child(odd) {
+      .advantage-content {
+        justify-content: flex-end;
+
+        &::before {
+          left: initial;
+          right: 50%;
+        }
+      }
+
+      .advantage-text {
+        order: -1;
+        padding-right: 20%;
+      }
+    }
+
+    &:nth-child(even) {
+      .advantage-content {
+        &::before {
+          left: 50%;
+        }
+      }
+
+      .advantage-text {
+        padding-left: 20%;
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    &:nth-child(odd) .advantage-text {
+      order: -1;
+      padding-right: 200px;
+    }
+
+    &:nth-child(even) .advantage-text {
+      padding-left: 200px;
+    }
+  }
+}
+
+.advantage-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0 0 0 10px;
+
+  @media (min-width: $screen-md) {
+    padding: 0;
+    flex-direction: row;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: 3px;
+    width: 10%;
+    height: 3px;
+    background: $white;
+
+    @media (min-width: $screen-md) {
+      width: 15%;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 180px;
+    }
+  }
+}
+
+.advantage-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+
+  @media (min-width: $screen-md) {
+    width: 50%;
+    height: 256px;
+  }
+}
+
+.advantage-text {
+  box-sizing: content-box;
+  width: 220px;
+
+  @media (min-width: $screen-md) {
+    width: 256px;
+  }
+}
+
+.advantage-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    text-align: left;
+  }
+}
