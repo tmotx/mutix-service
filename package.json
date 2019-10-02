@@ -1,0 +1,22 @@
+{
+  "name": "mutix-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:tmotx/mutix-service.git",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel *.html",
+    "build": "parcel build *.html"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "fs": "^0.0.1-security",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-ogimage": "^1.1.0",
+    "posthtml-include": "^1.2.0",
+    "sass": "^1.23.0"
+  }
+}
