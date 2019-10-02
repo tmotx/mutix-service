@@ -1,0 +1,18 @@
+@import "./size";
+
+.banner {
+  min-height: calc(100vh * 1200 / 754);
+
+  @media (min-width: $screen-md) {
+    min-height: calc(100vw * 1200 / 2560);
+  }
+}
+
+.banner-index {
+  background: url("~/assets/images/banner-coming.jpg") center no-repeat;
+  background-size: cover;
+
+  @media (min-width: $screen-md) {
+    background-image: url("~/assets/images/banner-coming-md.jpg");
+  }
+}

@@ -1,0 +1,23 @@
+@import "./color";
+
+.information {
+  padding: 20px 10% 30px;
+
+  img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+}
+
+.button-lg {
+  display: block;
+  width: 300px;
+  margin: 75px auto;
+  padding: 20px 0;
+  font-size: 24px;
+  text-align: center;
+  background: $blue-light;
+  border-radius: 50px;
+}

@@ -1,0 +1,110 @@
+@import "./size";
+@import "./color";
+@import "./components/topbar";
+@import "./components/footer";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Microsoft JhengHei", "微軟正黑體", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  letter-spacing: 0.025em;
+}
+
+body {
+  margin: 0;
+  color: $white;
+  font-size: 15px;
+  font-weight: 600;
+  background: $black;
+}
+
+img {
+  border: 0;
+}
+
+footer,
+header,
+section {
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  outline: 0;
+  color: $white;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  &.container-narrow {
+    max-width: 950px;
+  }
+}
+
+.anchor {
+  height: $topbar-height * 1.4;
+  margin: $topbar-height * -1.4 0 0;
+}
+
+.bg-blue {
+  background: $blue;
+}
+
+.hide-sm {
+  @media (max-width: $screen-md - 0.5) {
+    display: none;
+  }
+}
+
+.hide-md {
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+}
+
+.title {
+  font-size: 32px;
+
+  @media (min-width: $screen-md) {
+    font-size: 40px;
+  }
+}
+
+.text-title {
+  font-size: 24px;
+
+  @media (min-width: $screen-md) {
+    font-size: 30px;
+  }
+}
+
+.text-description {
+  font-size: 12px;
+  line-height: 1.7;
+
+  @media (min-width: $screen-md) {
+    font-size: 15px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
