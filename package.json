@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel *.html",
-    "build": "parcel build *.html"
+    "build": "parcel build *.html --no-source-maps && cp CNAME ./dist"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
