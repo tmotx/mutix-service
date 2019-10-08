@@ -8,13 +8,45 @@
   @media (min-width: $screen-md) {
     min-height: calc(100vw * 1200 / 2560);
   }
+
+  &::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .banner-index {
-  background-image: url("~/assets/images/banner-coming.jpg");
+  background-image: url("~/assets/images/banner-img.jpg");
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.title-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  top: 360px;
+  padding: 0 20px;
+  z-index: 1;
+  height: 150px;
+  font-weight: 600;
+
+  & > * {
+    margin: 0;
+  }
+
 
   @media (min-width: $screen-md) {
-    background-image: url("~/assets/images/banner-coming-md.jpg");
+    top: 400px;
+    padding-left: 88px;
+    h5 {  width: 410px; }
   }
 }
 
@@ -23,7 +55,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("~/assets/images/banner-service.jpg");
+  background-image: url("~/assets/images/banner-img.jpg");
 
   @media (min-width: $screen-md) {
     min-height: calc(100vw * 1200 / 2560);
