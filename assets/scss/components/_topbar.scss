@@ -5,10 +5,22 @@ $topbar-height: 50px;
 .header {
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
   height: $topbar-height;
   line-height: $topbar-height;
-  background-color: $black;
+  background: $black;
+
+  &.header-fixed {
+    position: fixed;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.2);
+
+    &.active {
+      background: $black;
+    }
+  }
 
   .container {
     display: flex;
@@ -24,6 +36,10 @@ $topbar-height: 50px;
     &:hover {
       background-color: $gray;
     }
+  }
+
+  &.header-fixed a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 

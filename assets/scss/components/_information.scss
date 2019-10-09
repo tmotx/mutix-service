@@ -3,11 +3,31 @@
 .information {
   padding: 20px 10% 30px;
 
+  &.partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 30px;
+    background: linear-gradient(to top, $blue 78%, transparent 78%);
+  }
+
+  .title {
+    line-height: 3;
+    letter-spacing: 0.4em;
+  }
+
   img {
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
+    &.icon {
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
+
+    &.logo {
+      width: 120px;
+      height: 120px;
+    }
   }
 }
 
@@ -20,4 +40,15 @@
   text-align: center;
   background: $blue-light;
   border-radius: 50px;
+}
+
+.button-md {
+  display: block;
+  width: 300px;
+  margin: 50px auto 10px;
+  padding: 15px 0;
+  font-size: 20px;
+  text-align: center;
+  background: $blue-light;
+  border-radius: 10px;
 }

@@ -1,0 +1,192 @@
+@import "./size";
+@import "./color";
+
+.prices {
+  .title {
+    margin: 0 0 10px;
+    line-height: 3;
+    text-align: center;
+    background: $blue;
+  }
+
+  .container {
+    position: relative;
+    background: $blue;
+
+    &.container-main {
+      padding: 30px 10%;
+
+      @media (min-width: $screen-lg) {
+        padding: 50px 0;
+      }
+    }
+  }
+}
+
+.price-container {
+  display: flex;
+  max-width: 375px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @media (min-width: $screen-lg) {
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 100%;
+  margin: 0 0 20px;
+  color: $gray-light;
+  transition: transform 0.5s;
+
+  [data-price="2"] & { transform: translate(-100%, 0); }
+  [data-price="3"] & { transform: translate(-200%, 0); }
+
+  @media (min-width: $screen-lg) {
+    min-width: 320px;
+    max-width: 360px;
+    width: 30%;
+    margin: 0 10px;
+    transform: none !important;
+    transition: transform 0.01s;
+  }
+
+  .text-title {
+    color: $white;
+    line-height: 75px;
+    text-align: center;
+  }
+}
+
+.price-number {
+  position: relative;
+  margin: 10px 0 10px 5px;
+  align-self: center;
+  font-size: 60px;
+  letter-spacing: 0.2em;
+
+  @media (min-width: $screen-lg) {
+    margin-left: 0px;
+  }
+
+  &::before {
+    content: "NTD";
+    position: absolute;
+    left: 0;
+    bottom: 90%;
+    font-size: 1rem;
+    letter-spacing: initial;
+
+    @media (min-width: $screen-lg) {
+      left: -5%;
+      bottom: 95%;
+    }
+  }
+
+  &::after {
+    content: "起";
+    position: absolute;
+    right: -1rem;
+    bottom: 5%;
+    font-size: 1rem;
+
+    @media (min-width: $screen-lg) {
+      right: -1.5rem;
+    }
+  }
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  min-height: 260px;
+  margin: 0 10px;
+  padding: 20px 30px;
+  background: $white;
+
+  @media (min-width: $screen-lg) {
+    margin: 0;
+    padding: 30px 35px;
+  }
+
+  &.price-footer {
+    flex-grow: 0;
+    min-height: 230px;
+    box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.price-list {
+  padding-inline-start: 20px;
+  line-height: 1.8;
+
+  &::before {
+    content: attr(data-head);
+    display: block;
+    margin: 0 0 10px -20px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: 10px;
+      left: -15px;
+      width: 8px;
+      height: 8px;
+      background: $gray-light;
+      border-radius: 50%;
+    }
+  }
+}
+
+.price-button {
+  position: absolute;
+  left: 50%;
+  bottom: 365px;
+  z-index: 1;
+  width: 65px;
+  height: 65px;
+  background: $white center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  @media (min-width: $screen-lg) {
+    display: none;
+  }
+
+  &.price-button--left {
+    transform: translate(-50%, 0) translate(-180px, 0);
+    background-image: url("~/assets/images/button-left.png");
+
+    [data-price="1"] & {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &.price-button--right {
+    transform: translate(-50%, 0) translate(180px, 0);
+    background-image: url("~/assets/images/button-right.png");
+
+    [data-price="3"] & {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}

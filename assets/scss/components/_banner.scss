@@ -1,7 +1,9 @@
 @import "./size";
 
 .banner {
-  min-height: calc(100vh * 1200 / 754);
+  min-height: calc(100vw * 1200 / 754);
+  background: center no-repeat;
+  background-size: cover;
 
   @media (min-width: $screen-md) {
     min-height: calc(100vw * 1200 / 2560);
@@ -9,10 +11,29 @@
 }
 
 .banner-index {
-  background: url("~/assets/images/banner-coming.jpg") center no-repeat;
-  background-size: cover;
+  background-image: url("~/assets/images/banner-coming.jpg");
 
   @media (min-width: $screen-md) {
     background-image: url("~/assets/images/banner-coming-md.jpg");
+  }
+}
+
+.banner-service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("~/assets/images/banner-service.jpg");
+
+  @media (min-width: $screen-md) {
+    min-height: calc(100vw * 1200 / 2560);
+  }
+}
+
+.hero-text {
+  font-size: 50px;
+
+  @media (min-width: $screen-md) {
+    font-size: 60px;
   }
 }
