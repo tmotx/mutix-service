@@ -7,6 +7,11 @@
     "dev": "parcel *.html -d dist-dev",
     "build": "rm -r dist && parcel build *.html --no-source-maps && cp CNAME ./dist"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
