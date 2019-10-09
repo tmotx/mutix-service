@@ -4,8 +4,8 @@
   "repository": "git@github.com:tmotx/mutix-service.git",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel *.html",
-    "build": "parcel build *.html --no-source-maps && cp CNAME ./dist"
+    "dev": "parcel *.html -d dist-dev",
+    "build": "rm -r dist && parcel build *.html --no-source-maps && cp CNAME ./dist"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
