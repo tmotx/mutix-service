@@ -10,16 +10,25 @@
   }
 
   .container {
-    position: relative;
     background: $blue;
 
     &.container-main {
-      padding: 30px 10%;
+      padding: 30px 0;
 
       @media (min-width: $screen-lg) {
         padding: 50px 0;
       }
     }
+  }
+}
+
+.price-main {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $screen-lg) {
+    max-width: initial;
   }
 }
 
@@ -111,6 +120,10 @@
   padding: 20px 30px;
   background: $white;
 
+  & + & {
+    padding: 30px 30px 10px;
+  }
+
   @media (min-width: $screen-lg) {
     margin: 0;
     padding: 30px 35px;
@@ -154,8 +167,7 @@
 
 .price-button {
   position: absolute;
-  left: 50%;
-  bottom: 365px;
+  bottom: 220px;
   z-index: 1;
   width: 65px;
   height: 65px;
@@ -171,8 +183,12 @@
   }
 
   &.price-button--left {
-    transform: translate(-50%, 0) translate(-180px, 0);
+    left: 0;
     background-image: url("~/assets/images/button-left.png");
+
+    @media (min-width: 360px) {
+      transform: translate(-30%, 0);
+    }
 
     [data-price="1"] & {
       opacity: 0;
@@ -181,8 +197,12 @@
   }
 
   &.price-button--right {
-    transform: translate(-50%, 0) translate(180px, 0);
+    right: 0;
     background-image: url("~/assets/images/button-right.png");
+
+    @media (min-width: 360px) {
+      transform: translate(30%, 0);
+    }
 
     [data-price="3"] & {
       opacity: 0;
