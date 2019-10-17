@@ -184,12 +184,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"assets/scss/index.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"/Users/tyosaul/tmotx/mutix-service/assets/images/icon-facebook.png":[["icon-facebook.2f011cfc.png","assets/images/icon-facebook.png"],"assets/images/icon-facebook.png"],"/Users/tyosaul/tmotx/mutix-service/assets/images/banner-coming.jpg":[["banner-coming.a4d192c6.jpg","assets/images/banner-coming.jpg"],"assets/images/banner-coming.jpg"],"/Users/tyosaul/tmotx/mutix-service/assets/images/banner-coming-md.jpg":[["banner-coming-md.36b6026e.jpg","assets/images/banner-coming-md.jpg"],"assets/images/banner-coming-md.jpg"],"/Users/tyosaul/tmotx/mutix-service/assets/images/icon-services.png":[["icon-services.7b856460.png","assets/images/icon-services.png"],"assets/images/icon-services.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,4 +388,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/scss.752916eb.js.map
+//# sourceMappingURL=/index.js.map
