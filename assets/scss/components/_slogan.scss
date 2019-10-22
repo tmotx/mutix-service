@@ -9,21 +9,20 @@
   }
 
   .container {
-    & > p {
+    > p {
       font-size: 48px;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       -webkit-text-stroke: 1px #76b0ff;
       color: transparent;
       margin: 10px 0;
       text-align: center;
-    }
 
-    @media (min-width: $screen-md) {
-      & > p {
+      @media (min-width: $screen-md) {
         font-size: 60px;
         margin: 54px 0 75px;
       }
     }
+
   }
 
   .text-title {

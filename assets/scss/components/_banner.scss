@@ -8,7 +8,16 @@
   @media (min-width: $screen-md) {
     min-height: calc(100vw * 1200 / 2560);
   }
+}
 
+.banner-index {
+  background-image: url("~/assets/images/banner-img.jpg");
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.banner-index-mask {
   &::before {
     content: "";
     background-color: rgba(0, 0, 0, 0.5);
@@ -18,13 +27,6 @@
     left: 0;
     right: 0;
   }
-}
-
-.banner-index {
-  background-image: url("~/assets/images/banner-img.jpg");
-  width: 100%;
-  height: 600px;
-  position: relative;
 }
 
 .title-text-container {
@@ -55,7 +57,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url("~/assets/images/banner-img.jpg");
+  background-image: url("~/assets/images/banner-service.jpg");
 
   @media (min-width: $screen-md) {
     min-height: calc(100vw * 1200 / 2560);
