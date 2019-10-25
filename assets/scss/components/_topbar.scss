@@ -15,7 +15,6 @@ $topbar-height: 50px;
   &.header-fixed {
     position: fixed;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.2);
 
     &.active {
       background: $black;
@@ -56,4 +55,136 @@ $topbar-height: 50px;
   min-height: $topbar-height;
   background: url("~/assets/images/icon-facebook.png") center no-repeat;
   background-size: 80%;
+}
+
+// ==============================================================================
+.header.contact-header {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  height: $topbar-height;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: $screen-md) {
+    background-color: $black;
+    ul {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.cotact-container {
+  height: 50px;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 0.3s;
+    z-index: -1;
+    background-color: yellowgreen;
+  }
+}
+
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    border-radius: 10px;
+    left: 5px;
+    background-color: $white;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px -10px 0px $white;
+    transition: 0.2s;
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    border-radius: 10px;
+    left: 5px;
+    background-color: $white;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 10px 0px $white;
+    transition: 0.2s;
+  }
+}
+
+.menu-btn > span {
+  display: none;
+}
+
+#menu-control {
+  display: none;
+}
+
+#menu-control:checked ~ .cotact-container {
+  &:before {
+    border-radius: 0%;
+    background-color: $blue-light;
+    height: 500px;
+    width: 100%;
+    right: 0;
+  }
+
+  .menu-btn::before {
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 0px $white;
+  }
+  .menu-btn::after {
+    transform: rotate(-45deg);
+    box-shadow: 0px 0px 0px $white;
+  }
+  nav {
+    opacity: 1;
+  }
+
+  @media (min-width: $screen-md) {
+    background-color: $black;
+  }
+}
+
+.contact-header-menu {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  opacity: 0;
+  padding: 3%;
+
+  @media (min-width: $screen-md) {
+    opacity: 1;
+    background-color: $black;
+    position: relative;
+    top: 0;
+    padding: 0;
+  }
 }
