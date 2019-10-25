@@ -1,0 +1,76 @@
+@import "../size";
+
+.contact {
+  display: block;
+  padding-top: 20%;
+  @media (min-width: $screen-md) {
+    display: grid;
+    grid-template-areas:
+      "img title"
+      "img li";
+    grid-template-columns: 8fr 5fr;
+    margin: 4% 5% 4% 5%;
+    padding: 7% 0;
+  }
+}
+
+.contact-title {
+  p {
+    font-size: 48px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 1px #76b0ff;
+    color: rgba(88, 71, 241, 0);
+    margin: 10px 0;
+    text-align: center;
+    font-family: "PingFang TC";
+    @media (min-width: $screen-md) {
+      grid-area: title;
+      font-size: 60px;
+      margin: 2%;
+    }
+  }
+}
+
+.contact-case {
+  min-height: calc(100vw * 255 / 375);
+  background: center no-repeat;
+  background-size: cover;
+
+  @media (min-width: $screen-md) {
+    grid-area: img;
+    min-height: min-content;
+  }
+}
+
+.contact-img {
+  background-image: url("~/assets/images/banner-img.jpg");
+
+  @media (min-width: $screen-md) {
+    background-image: url("~/assets/images/banner-img.jpg");
+  }
+}
+
+ul.list-style-image {
+  padding: 0 2%;
+  margin: 2%;
+  list-style: square;
+  @media (min-width: $screen-md) {
+    grid-area: li;
+  }
+}
+
+.list-style-image > li {
+  list-style-type: none;
+  background: url("~/assets/images/icon.png") no-repeat;
+  background-position: left center;
+  background-size: 2rem;
+  padding: 10% 5% 10% 15%;
+  @media (min-width: $screen-md) {
+    background: url("~/assets/images/icon.png") no-repeat;
+    background-position: left;
+    background-size: 2.5rem;
+    min-height: 40px;
+    padding: 3% 3% 3% 23%;
+    margin: 10%;
+  }
+}
