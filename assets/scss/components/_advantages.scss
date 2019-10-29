@@ -31,6 +31,17 @@
   display: flex;
   padding: 0 0 50px;
 
+  @media (min-width: $screen-md) {
+    width: 192px;
+    height: 600px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 25%;
+    max-width: 320px;
+    height: 750px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -42,11 +53,11 @@
     background: $white;
 
     @media (min-width: $screen-md) {
-      bottom: unset;
       height: 6px;
       right: 0;
       top: 50%;
       width: auto;
+      transform: translate(0, -50%);
     }
   }
 
@@ -67,64 +78,69 @@
     }
   }
 
-  @media (min-width: $screen-md) {
-    width: 192px;
-    height: 600px;
-
-    &:nth-child(odd) {
+  &:nth-child(odd) {
+    @media (min-width: $screen-md) {
       padding: 0;
-      .advantage-text {
+    }
+
+    .advantage-text {
+      @media (min-width: $screen-md) {
         padding: 135px 0 0 0 ;
       }
-    }
 
-    &:nth-child(even) {
-      align-items: flex-end;
-      .advantage-content {
-        &::before {
-          top: 36%;
-        }
-      }
-
-      .advantage-text {
-        order: -1;
-        padding: 0 0 170px 10px;
-      }
-    }
-
-    &:last-child {
-      padding: 0 0 20px;
-      .advantage-text {
-        padding-bottom: 200px;
+      @media (min-width: $screen-lg) {
+        padding: 190px 0 0 10%;
       }
     }
   }
 
-  @media (min-width: $screen-lg) {
-    width: 25%;
-    max-width: 320px;
-    height: 750px;
-
-    &:nth-child(odd) .advantage-text {
-      padding: 190px 0 0 10%;
+  &:nth-child(even) {
+    @media (min-width: $screen-md) {
+      align-items: flex-end;
     }
 
-    &:nth-child(even) {
-      .advantage-content {
+    .advantage-content {
+      @media (min-width: $screen-lg) {
         justify-content: flex-end;
-        &::before {
+      }
+
+      &::before {
+        @media (min-width: $screen-md) {
+          top: 36%;
+        }
+
+        @media (min-width: $screen-lg) {
           top: 30%;
         }
       }
+    }
 
-      .advantage-text {
+    .advantage-text {
+      @media (min-width: $screen-md) {
+        order: -1;
+        padding: 0 0 170px 10px;
+      }
+
+      @media (min-width: $screen-lg) {
         padding-left: 5%;
         padding-bottom: 190px;
       }
     }
+  }
 
-    &:last-child .advantage-text {
+  &:last-child {
+    @media (min-width: $screen-md) {
+      padding: 0 0 20px;
+    }
+
+    .advantage-text {
+      @media (min-width: $screen-md) {
+        padding-bottom: 200px;
+      }
+
+      @media (min-width: $screen-lg) {
         padding-bottom: 220px;
+      }
     }
   }
 }
@@ -140,7 +156,6 @@
     padding: 0;
     justify-content: center;
   }
-
   @media (min-width: $screen-lg) {
     height: 660px;
   }
@@ -155,7 +170,7 @@
     background: $white;
 
     @media (min-width: $screen-md) {
-      left: inherit;
+      left: initial;
       width: 3px;
       height: 84px;
       top: 50%;
