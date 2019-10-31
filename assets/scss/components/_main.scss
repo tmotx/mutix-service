@@ -1,8 +1,6 @@
 @import "../color";
 
 .intro {
-  width: 100%;
-  height: 100%;
 
   @media (min-width: $screen-md) {
     display: grid;
