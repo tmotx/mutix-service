@@ -22,7 +22,7 @@
   @media (min-width: $screen-md) {
     display: flex;
     margin-bottom: 50px;
-    justify-content: center
+    justify-content: center;
   }
 }
 
@@ -32,13 +32,12 @@
   padding: 0 0 50px;
 
   @media (min-width: $screen-md) {
-    width: 192px;
+    width: 25%;
+    max-width: 320px;
     height: 600px;
   }
 
   @media (min-width: $screen-lg) {
-    width: 25%;
-    max-width: 320px;
     height: 750px;
   }
 
@@ -85,7 +84,7 @@
 
     .advantage-text {
       @media (min-width: $screen-md) {
-        padding: 135px 0 0 0 ;
+        padding: 135px 0 0 0;
       }
 
       @media (min-width: $screen-lg) {
