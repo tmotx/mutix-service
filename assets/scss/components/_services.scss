@@ -2,22 +2,11 @@
 @import "./color";
 
 .services {
-  padding: 50px 0;
-
-  .container {
-    padding: 0 10%;
-  }
+  padding: 50px 22px;
 
   .title {
-    @media (min-width: $screen-md) {
-      text-align: center;
-    }
-
-    small {
-      display: block;
-      font-size: 1rem;
-      margin: 20px 0;
-    }
+    text-align: center;
+    padding: 6px 0 26px;
   }
 }
 
@@ -26,6 +15,10 @@
   flex-wrap: wrap;
   max-width: 1280px;
   margin: 0 auto;
+
+  @media (min-width: $screen-lg) {
+    padding: 0 120px;
+  }
 }
 
 .service {
@@ -38,22 +31,45 @@
     width: calc(100% / 7);
   }
 
-  &:nth-of-type(2) .service-image { background-position: 0 -100px; }
-  &:nth-of-type(3) .service-image { background-position: 0 -200px; }
-  &:nth-of-type(4) .service-image { background-position: 0 -300px; }
-  &:nth-of-type(5) .service-image { background-position: 0 -400px; }
-  &:nth-of-type(6) .service-image { background-position: 0 -500px; }
-  &:nth-of-type(7) .service-image { background-position: 0 -600px; }
+  &:nth-of-type(2) .service-image {
+    background-position: 0 -100px;
+  }
+  &:nth-of-type(3) .service-image {
+    background-position: 0 -200px;
+  }
+  &:nth-of-type(4) .service-image {
+    background-position: 0 -300px;
+  }
+  &:nth-of-type(5) .service-image {
+    background-position: 0 -400px;
+  }
+  &:nth-of-type(6) .service-image {
+    background-position: 0 -500px;
+  }
+  &:nth-of-type(7) .service-image {
+    background-position: 0 -600px;
+  }
 }
 
 .service-image {
   width: 100px;
   height: 100px;
-  background: url("~/assets/images/icon-services.png") center top no-repeat;
+  background: center top no-repeat;
   background-size: 100px;
+
+  &.service-image-1f {
+    background-image: url("~/assets/images/icon-services-1f.png");
+  }
+
+  &.service-image-2f {
+    background-image: url("~/assets/images/icon-services-2f.png");
+  }
 }
 
 .service-text {
+  margin: 0.5em 0 2em;
+}
+
+.wide {
   width: 100px;
-  margin: 15px 0 0;
 }
