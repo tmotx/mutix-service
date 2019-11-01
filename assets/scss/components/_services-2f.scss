@@ -1,0 +1,72 @@
+@import "./size";
+@import "./color";
+
+.services {
+  padding: 50px 22px;
+
+  .title {
+    text-align: center;
+    padding: 6px 0 26px;
+  }
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @media (min-width: $screen-lg) {
+    padding: 0 120px;
+  }
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3);
+
+  @media (min-width: $screen-md) {
+    width: calc(100% / 7);
+  }
+
+  &:nth-of-type(2) .service-image {
+    background-position: 0 -100px;
+  }
+  &:nth-of-type(3) .service-image {
+    background-position: 0 -200px;
+  }
+  &:nth-of-type(4) .service-image {
+    background-position: 0 -300px;
+  }
+  &:nth-of-type(5) .service-image {
+    background-position: 0 -400px;
+  }
+  &:nth-of-type(6) .service-image {
+    background-position: 0 -500px;
+  }
+  &:nth-of-type(7) .service-image {
+    background-position: 0 -600px;
+  }
+
+  &:nth-of-type(1),
+  &:nth-of-type(2),
+  &:nth-of-type(4) {
+    .service-text {
+      width: 83px;
+    }
+  }
+}
+
+.service-image {
+  width: 100px;
+  height: 100px;
+  background: url("~/assets/images/icon-services.png") center top no-repeat;
+  background-size: 100px;
+}
+
+.service-text {
+  width: 100px;
+  margin: 7px 0 21px;
+}
