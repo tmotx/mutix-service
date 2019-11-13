@@ -9,14 +9,12 @@
   }
 
   .title {
-    @media (min-width: $screen-md) {
-      text-align: center;
+    small {
+      font-size: 1rem;
     }
 
-    small {
-      display: block;
-      font-size: 1rem;
-      margin: 20px 0;
+    @media (min-width: $screen-md) {
+      text-align: center;
     }
   }
 }
@@ -39,25 +37,16 @@
   display: flex;
   flex-direction: column;
 
+  .title {
+    padding: 10% 0;
+    @media (min-width: $screen-md) {
+      padding: 0 3%;
+      text-align: left;
+    }
+  }
+
   @media (min-width: $screen-md) {
     padding: 0% 2%;
-  }
-}
-
-.price-description > .title {
-  padding: 10% 0;
-  @media (min-width: $screen-md) {
-    padding: 0 3%;
-    text-align: left;
-  }
-}
-
-.title-1f {
-  &::after {
-    content: "建議人數 ｜ 30-50 人";
-    color: $white;
-    font-size: 0.5rem;
-    letter-spacing: initial;
   }
 }
 
@@ -70,12 +59,12 @@
   text-align: center;
   background: $white;
 
-  @media (min-width: $screen-md) {
-    margin: 10% 0 0;
-  }
-
   .text-title {
     line-height: 75px;
+  }
+
+  @media (min-width: $screen-md) {
+    margin: 10% 0 0;
   }
 }
 
