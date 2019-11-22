@@ -1,22 +1,31 @@
-<header class="header header-fixed">
-  <div class="container">
+<header class="header">
+  <input type="checkbox" id="menu-control" />
+  <div class="container header-container">
     <a href="/">
-      <img class="header-logo" alt="mutix Studio" src="~/assets/images/logo.png" />
+      <img
+        class="header-logo"
+        alt="mutix Studio"
+        src="~/assets/images/logo.png"
+      />
     </a>
-    <div>
-      <nav class="header-menu">
-        <ul>
-          <li>
-            <a href="#price">方案與價格</a>
-          </li>
-          <li>
-            <a href="https://forms.gle/W7RWrojc24ugt7Ab7" target="_blank">申請加入</a>
-          </li>
-          <li class="hide-sm">
-            <a class="header-icon" title="mutix Studio" href="https://www.facebook.com/mutixstudio" target="_blank" ></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <label for="menu-control" class="menu-btn hide-md">
+      <span>選單</span>
+    </label>
+    <nav class="header-menu">
+      <ul id="menu">
+        <li><a href="/gallery">多功能藝廊區</a></li>
+        <li><a href="/co-working-space">共同工作空間</a></li>
+        <li><a href="/sevice">額外服務</a></li>
+        <li><a href="/contact">連絡我們</a></li>
+        <li class="hide-sm">
+          <a
+            class="header-icon"
+            title="mutix Studio"
+            href="https://www.facebook.com/mutixstudio"
+            target="_blank"
+          ></a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>

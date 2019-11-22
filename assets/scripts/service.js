@@ -1,17 +1,3 @@
-// topbar
-{
-  const topbar = document.querySelector(".header-fixed");
-
-  window.addEventListener("scroll", () => {
-    const addClass = document.body.scrollTop > 600 || document.documentElement.scrollTop > 600;
-    if (addClass) {
-      topbar.classList.add("active");
-    } else {
-      topbar.classList.remove("active");
-    }
-  });
-}
-
 // slide
 {
   const slideContainer = document.querySelector(".service-slide");

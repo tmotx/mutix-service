@@ -15,10 +15,6 @@ $topbar-height: 50px;
   &.header-fixed {
     position: fixed;
     z-index: 10;
-
-    &.active {
-      background: $black;
-    }
   }
 
   .container {
@@ -39,12 +35,30 @@ $topbar-height: 50px;
     height: 50px;
 
     &:hover {
-      background-color: $gray;
+      background-color: rgba(0, 0, 0, 0.4);
+
+      @media (min-width: $screen-md) {
+        background-color: $gray;
+      }
     }
   }
 
-  &.header-fixed a:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    @media (min-width: $screen-md) {
+      flex-direction: row;
+      justify-content: flex-end;
+      width: auto;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      transition: background 0.3s;
+    }
   }
 }
 
@@ -59,35 +73,7 @@ $topbar-height: 50px;
   background-size: 80%;
 }
 
-.header.contact-header {
-  display: block;
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  height: $topbar-height;
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-
-    a {
-      display: block;
-      text-align: center;
-      transition: background 0.3s;
-    }
-  }
-  @media (min-width: $screen-md) {
-    background-color: $black;
-    ul {
-      flex-direction: row;
-      justify-content: flex-end;
-      width: 100%;
-    }
-  }
-}
-
-.cotact-container::before {
+.header-container::before {
   content: " ";
   position: absolute;
   height: 100vw;
@@ -118,7 +104,7 @@ $topbar-height: 50px;
   z-index: 1;
 
   &::before {
-    content: " ";
+    content: "";
     position: absolute;
     height: 3px;
     width: 30px;
@@ -133,7 +119,7 @@ $topbar-height: 50px;
   }
 
   &::after {
-    content: " ";
+    content: "";
     position: absolute;
     height: 3px;
     width: 30px;
@@ -144,14 +130,14 @@ $topbar-height: 50px;
     bottom: 0;
     margin: auto;
     box-shadow: 0 10px 0 $white;
-    transition: 0.2s;
+    transition: transform 0.2s;
   }
 
   & > span {
     display: none;
   }
 
-  #menu-control:checked ~ .cotact-container & {
+  #menu-control:checked ~ .header-container & {
     &::before {
       transform: rotate(45deg);
       box-shadow: 0 0 0 $white;
@@ -167,13 +153,13 @@ $topbar-height: 50px;
   display: none;
 }
 
-.contact-header-menu {
+.header-menu {
   opacity: 0;
   padding-top: 20px;
   pointer-events: none;
   transition: opacity 0s ease-in-out 0.06s;
 
-  #menu-control:checked ~ .cotact-container & {
+  #menu-control:checked ~ .container & {
     pointer-events: auto;
     opacity: 1;
   }
