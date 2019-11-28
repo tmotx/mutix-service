@@ -9,7 +9,9 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: "PingFang TC", "Microsoft JhengHei", "微軟正黑體", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "PingFang TC", "Microsoft JhengHei", "微軟正黑體",
+    "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   letter-spacing: 0.025em;
@@ -108,4 +110,59 @@ a {
 .justify {
   display: flex;
   justify-content: space-between;
+}
+
+.neon-sign {
+  color: $black;
+  font-size: 48px;
+  text-align: center;
+  user-select: none;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #76b0ff, 0 0 0.5em #76b0ff,
+    0 0 0.1em #76b0ff, 0 10px 3px $black;
+  filter: contrast(1.2);
+
+  @media (min-width: $screen-md) {
+    font-size: 60px;
+  }
+
+  span {
+    animation: blink linear infinite 2s;
+
+    &:nth-of-type(2) {
+      animation: blink linear infinite 3s;
+    }
+  }
+}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: $blue;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
 }
