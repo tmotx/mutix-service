@@ -2,51 +2,68 @@
 @import "./color";
 
 .prices {
+  display: grid;
   padding: 50px 0;
 
   @media (min-width: $screen-md) {
     padding: 50px 0;
   }
 
+  @media (min-width: $screen-lg) {
+    padding: 50px 3%;
+    grid-template-columns: 7fr 3fr;
+  }
+
   .title {
-    small {
-      font-size: 1rem;
-    }
+    padding: 10% 0;
 
     @media (min-width: $screen-md) {
       text-align: center;
+      padding-bottom: 0;
     }
-  }
-}
 
-.price-container {
-  @media (min-width: $screen-md) {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
+    @media (min-width: $screen-lg) {
+      margin: 10px 0 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    small {
+      font-size: 1rem;
+    }
   }
 }
 
 .price-img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
+
+  @media (min-width: $screen-lg) {
+    height: 100%;
+  }
 }
 
-.price-description {
-  padding: 5% 5%;
+.price-cards {
+  padding: 5%;
   display: flex;
   flex-direction: column;
 
-  .title {
-    padding: 10% 0;
-    @media (min-width: $screen-md) {
-      padding: 0 3%;
-      text-align: left;
-    }
+  @media (min-width: $screen-lg) {
+    padding: 0 0 0 20px;
   }
+}
+
+.price-main {
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: $screen-md) {
-    padding: 0% 2%;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  @media (min-width: $screen-lg) {
+    flex-direction: column;
   }
 }
 
@@ -59,12 +76,18 @@
   text-align: center;
   background: $white;
 
-  .text-title {
-    line-height: 75px;
+  @media (min-width: $screen-md) {
+    width: 50%;
+    margin: 50px 20px 0;
   }
 
-  @media (min-width: $screen-md) {
-    margin: 10% 0 0;
+  @media (min-width: $screen-lg) {
+    width: auto;
+    margin: 20px 0 0;
+  }
+
+  .text-title {
+    line-height: 75px;
   }
 }
 
@@ -73,7 +96,7 @@
   margin: 10px 0 10px 15px;
   align-self: center;
   font-size: 60px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
 
   &::before {
     content: "NTD";

@@ -1,7 +1,6 @@
 @import "../color";
 
 .intro {
-
   @media (min-width: $screen-md) {
     display: grid;
     grid-template-columns: 8fr 5fr;

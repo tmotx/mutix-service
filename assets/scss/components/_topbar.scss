@@ -154,22 +154,26 @@ $topbar-height: 50px;
 }
 
 .header-menu {
+  max-height: 0;
   opacity: 0;
   padding-top: 20px;
   pointer-events: none;
-  transition: opacity 0s ease-in-out 0.06s;
+  transition: max-height 0s 0.3s, opacity 0.1s 0.06s;
 
-  #menu-control:checked ~ .container & {
-    pointer-events: auto;
+  #menu-control:checked + .container & {
+    max-height: 250px;
     opacity: 1;
+    pointer-events: auto;
+    transition: height 0s, opacity 0.2s 0.06s;
   }
 
   @media (min-width: $screen-md) {
-    opacity: 1;
-    background-color: $black;
     position: relative;
     top: 0;
+    max-height: auto;
     padding: 0;
+    background-color: $black;
+    opacity: 1;
     pointer-events: auto;
   }
 }
