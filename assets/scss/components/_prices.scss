@@ -38,6 +38,12 @@
         margin: 0;
         transform: translate(1em, 0);
       }
+
+      @media (min-width: $screen-xl) {
+        width: auto;
+        margin: 0 0 0 10px;
+        transform: none;
+      }
     }
   }
 }
