@@ -10,12 +10,13 @@
   }
 
   @media (min-width: $screen-xl) {
-    padding: 50px 3%;
-    grid-template-columns: 7fr 3fr;
+    padding: 50px 35px;
+    grid-template-columns: 1fr 320px;
   }
 
   .title {
     padding: 0 0 30px;
+    font-size: 30px;
     text-align: center;
 
     @media (min-width: $screen-md) {
@@ -30,7 +31,7 @@
     small {
       display: inline-block;
       margin: 0 0 0 10px;
-      font-size: 1rem;
+      font-size: 15px;
       white-space: nowrap;
 
       @media (min-width: $screen-md) {
@@ -48,12 +49,75 @@
   }
 }
 
-.price-img {
+.price-floor-plan {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  padding: 0 0 75%;
+  background: center no-repeat;
+  background-size: contain;
 
-  @media (min-width: $screen-lg) {
-    height: 100%;
+  &.gallery {
+    background-image: url("~/assets/images/floor-plan/gallery.png");
+  }
+}
+
+.floor-plan-button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: center no-repeat;
+  background-size: contain;
+  transform: translate(-50% , 0);
+  cursor: pointer;
+
+  @media (min-width: $screen-md) {
+    width: 100px;
+    height: 100px;
+  }
+
+  &.gallery-stair {
+    left: 27%;
+    bottom: 20%;
+    background-image: url("~/assets/images/floor-plan/gallery-stair.png");
+  }
+
+  &.gallery-meeting {
+    left: 32.5%;
+    bottom: 42%;
+
+    [data-meeting="1"] & { background-image: url("~/assets/images/floor-plan/gallery-meeting-1.png"); }
+    [data-meeting="2"] & { background-image: url("~/assets/images/floor-plan/gallery-meeting-2.png"); }
+  }
+
+  &.gallery-space {
+    left: 70%;
+    bottom: 55%;
+
+    [data-space="1"] & { background-image: url("~/assets/images/floor-plan/gallery-space-1.png"); }
+    [data-space="2"] & { background-image: url("~/assets/images/floor-plan/gallery-space-2.png"); }
+  }
+}
+
+.floor-plan-object {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  [data-meeting="2"] &[data-meeting="2"],
+  [data-space="2"] &[data-space="2"] {
+    opacity: 1;
+  }
+
+  &.gallery-space {
+    width: 40%;
+    top: 21%;
+    right: 7.5%;
+  }
+
+  &.gallery-meeting {
+    width: 4.2%;
+    top: 47%;
+    left: 30.4%;
   }
 }
 
@@ -86,7 +150,7 @@
   flex-direction: column;
   margin: 0 0 20px;
   color: $gray-light;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   background: $white;
 
@@ -102,30 +166,35 @@
 
   .text-title {
     line-height: 75px;
-    padding: 0 0 10px;
   }
 }
 
 .price-number {
-  position: relative;
-  margin: 10px 0 10px 15px;
+  display: flex;
+  padding: 0 15px 0 0;
   align-self: center;
-  font-size: 60px;
+  font-size: 40px;
   letter-spacing: 0.1em;
 
   &::before {
     content: "NTD";
-    position: absolute;
-    left: -5%;
-    bottom: 95%;
-    font-size: 1rem;
+    margin: 10px 5px 0 0;
+    font-size: 12px;
     letter-spacing: initial;
+  }
+
+  &.top {
+    margin: 10px 0 0;
+
+    &::before {
+      width: 0;
+      transform: translate(-5px, -20px);
+    }
   }
 }
 
 .price-line {
-  height: 60px;
-  line-height: 60px;
+  padding: 10px 0 20px;
 }
 
 .price-footer {
@@ -142,7 +211,6 @@
     text-align: left;
   }
 }
-
 
 .price-note {
   font-size: 10px;
