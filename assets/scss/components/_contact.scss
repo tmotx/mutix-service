@@ -61,9 +61,12 @@
     align-items: center;
     height: 40px;
     margin: 20px 0;
-    padding: 0 0 0 50px;
-    background: url("~/assets/images/icon.png") left center no-repeat;
-    background-size: 35px;
+    padding: 0 0 0 55px;
+    background: url("~/assets/images/contact-icon.png") left top no-repeat;
+    background-size: 40px;
+
+    &:nth-child(2) { background-position: 0 -40px; }
+    &:nth-child(3) { background-position: 0 -80px; }
 
     @media (min-width: $screen-lg) {
       margin: 10px 0;
