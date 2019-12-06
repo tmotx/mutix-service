@@ -59,20 +59,28 @@
   &.gallery {
     background-image: url("~/assets/images/floor-plan/gallery.png");
   }
+
+  &.co-working {
+    background-image: url("~/assets/images/floor-plan/co-working.png");
+  }
 }
 
 .floor-plan-button {
   position: absolute;
   width: 60px;
   height: 60px;
+  transform: translate(-50%, 0);
   background: center no-repeat;
   background-size: contain;
-  transform: translate(-50% , 0);
   cursor: pointer;
 
   @media (min-width: $screen-md) {
     width: 100px;
     height: 100px;
+  }
+
+  &.bounce {
+    animation: bounce 0.8s infinite both;
   }
 
   &.gallery-stair {
@@ -85,16 +93,43 @@
     left: 32.5%;
     bottom: 42%;
 
-    [data-meeting="1"] & { background-image: url("~/assets/images/floor-plan/gallery-meeting-1.png"); }
-    [data-meeting="2"] & { background-image: url("~/assets/images/floor-plan/gallery-meeting-2.png"); }
+    [data-meeting="1"] & {
+      background-image: url("~/assets/images/floor-plan/gallery-meeting-1.png");
+    }
+    [data-meeting="2"] & {
+      background-image: url("~/assets/images/floor-plan/gallery-meeting-2.png");
+    }
   }
 
   &.gallery-space {
     left: 70%;
     bottom: 55%;
 
-    [data-space="1"] & { background-image: url("~/assets/images/floor-plan/gallery-space-1.png"); }
-    [data-space="2"] & { background-image: url("~/assets/images/floor-plan/gallery-space-2.png"); }
+    [data-space="1"] & {
+      background-image: url("~/assets/images/floor-plan/gallery-space-1.png");
+    }
+    [data-space="2"] & {
+      background-image: url("~/assets/images/floor-plan/gallery-space-2.png");
+    }
+  }
+
+  &.co-working-stair {
+    left: 76.7%;
+    bottom: 59.5%;
+    background-image: url("~/assets/images/floor-plan/co-working-stair.png");
+  }
+
+  &.co-working-office {
+    background-image: url("~/assets/images/floor-plan/co-working-office.png");
+
+    &[data-switch="office1"] {
+      left: 20.2%;
+      bottom: 58%;
+    }
+    &[data-switch="office2"] {
+      left: 57.6%;
+      bottom: 65%;
+    }
   }
 }
 
@@ -104,7 +139,9 @@
   transition: opacity 0.3s;
 
   [data-meeting="2"] &[data-meeting="2"],
-  [data-space="2"] &[data-space="2"] {
+  [data-space="2"] &[data-space="2"],
+  [data-office1="2"] &[data-office1="2"],
+  [data-office2="2"] &[data-office2="2"] {
     opacity: 1;
   }
 
@@ -118,6 +155,19 @@
     width: 4.2%;
     top: 47%;
     left: 30.4%;
+  }
+
+  &.co-working-office[data-office1="2"] {
+    width: 13.6%;
+    top: 36.6%;
+    left: 19.8%;
+    transform: rotate(-90deg);
+  }
+
+  &.co-working-office[data-office2="2"] {
+    width: 13.7%;
+    top: 37.3%;
+    left: 51.1%;
   }
 }
 
@@ -214,4 +264,26 @@
 
 .price-note {
   font-size: 10px;
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  40%, 43% {
+    transform: translate(-50%, -20px);
+  }
+
+  40%, 43%, 70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  }
+
+  70% {
+    transform: translate(-50%, -10px);
+  }
+
+  90% {
+    transform: translate(-50%, -4px);
+  }
 }
