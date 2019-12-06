@@ -72,15 +72,12 @@
   transform: translate(-50%, 0);
   background: center no-repeat;
   background-size: contain;
+  animation: bounce 0.8s infinite both;
   cursor: pointer;
 
   @media (min-width: $screen-md) {
     width: 100px;
     height: 100px;
-  }
-
-  &.bounce {
-    animation: bounce 0.8s infinite both;
   }
 
   &.gallery-stair {
