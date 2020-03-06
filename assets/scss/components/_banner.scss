@@ -19,13 +19,15 @@
 
 .banner-index {
   position: relative;
-  background: #1a384d url("~/assets/images/banner-img.png") center bottom no-repeat;
-  background-size: contain;
+  background: #1a384d url("~/assets/images/banner-img-sm.jpg") center no-repeat;
+  background-size: cover;
+
+  @media (min-width: $screen-md) {
+    background-image: url("~/assets/images/banner-img-md.jpg");
+  }
 
   @media (min-width: $screen-md) {
     min-height: calc(100vw * 600 / 1280);
-    background-size: cover;
-    background-position: center;
   }
 }
 
