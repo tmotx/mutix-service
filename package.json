@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "parcel *.html -d dist-dev",
-    "build": "rm -r dist && parcel build *.html --no-source-maps && cp CNAME ./dist"
+    "build": "rm -rf dist && parcel build *.html --no-source-maps && cp CNAME ./dist"
   },
   "config": {
     "commitizen": {
