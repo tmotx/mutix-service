@@ -1,7 +1,5 @@
 @import "./color";
 
-$topbar-height: 50px;
-
 .header {
   position: sticky;
   top: 0;
@@ -12,17 +10,13 @@ $topbar-height: 50px;
   line-height: $topbar-height;
   background: $black;
 
-  &.header-fixed {
-    position: fixed;
-    z-index: 10;
-  }
-
   .container {
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;
+
     @media (min-width: $screen-md) {
       flex-wrap: nowrap;
     }
@@ -73,24 +67,31 @@ $topbar-height: 50px;
   background-size: 80%;
 }
 
-.header-container::before {
-  content: " ";
-  position: absolute;
-  height: 100vw;
-  width: 100vw;
-  border-radius: 50%;
-  right: $topbar-height/2;
-  top: $topbar-height/2;
-  transform: translate(50%, -50%) scale(0);
-  transition: 0.2s;
-  z-index: -1;
-  background-color: $blue-light;
-  @media (min-width: $screen-md) {
-    display: none;
+.header-container {
+  @media (min-width: $screen-lg) {
+    max-width: 1024px !important;
   }
 
-  #menu-control:checked ~ & {
-    transform: translate(50%, -50%) scale(2.5);
+  &::before {
+    content: " ";
+    position: absolute;
+    height: 100vw;
+    width: 100vw;
+    border-radius: 50%;
+    right: $topbar-height/2;
+    top: $topbar-height/2;
+    transform: translate(50%, -50%) scale(0);
+    transition: transform 0.25s;
+    z-index: -1;
+    background-color: $blue-light;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+
+    #menu-control:checked ~ & {
+      transform: translate(50%, -50%) scale(3);
+    }
   }
 }
 
@@ -101,50 +102,42 @@ $topbar-height: 50px;
   z-index: 1;
   width: 40px;
   height: 40px;
+  font-size: 0;
   cursor: pointer;
 
-  &::before {
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 30px;
-    border-radius: 10px;
-    left: 5px;
-    background-color: $white;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    box-shadow: 0 -10px 0 $white;
-    transition: 0.2s;
-  }
-
+  &::before,
   &::after {
     content: "";
     position: absolute;
-    height: 3px;
-    width: 30px;
-    border-radius: 10px;
-    left: 5px;
-    background-color: $white;
     top: 0;
+    left: 5px;
     bottom: 0;
+    width: 30px;
+    height: 3px;
     margin: auto;
-    box-shadow: 0 10px 0 $white;
-    transition: transform 0.2s;
+    background: $white;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
+
+    #menu-control:checked ~ .header-container & {
+      box-shadow: 0 0 0 $white;
+    }
   }
 
-  & > span {
-    display: none;
+  &::before {
+    box-shadow: 0 -10px 0 $white;
+  }
+
+  &::after {
+    box-shadow: 0 10px 0 $white;
   }
 
   #menu-control:checked ~ .header-container & {
     &::before {
       transform: rotate(45deg);
-      box-shadow: 0 0 0 $white;
     }
     &::after {
       transform: rotate(-45deg);
-      box-shadow: 0 0 0 $white;
     }
   }
 }
@@ -156,15 +149,15 @@ $topbar-height: 50px;
 .header-menu {
   max-height: 0;
   opacity: 0;
-  padding-top: 20px;
+  padding: 20px 0 10px;
   pointer-events: none;
   transition: max-height 0s 0.3s, opacity 0.1s 0.06s;
 
   #menu-control:checked + .container & {
-    max-height: 250px;
+    max-height: 290px;
     opacity: 1;
     pointer-events: auto;
-    transition: height 0s, opacity 0.2s 0.06s;
+    transition: max-height 0s, opacity 0.3s 0.1s;
   }
 
   @media (min-width: $screen-md) {

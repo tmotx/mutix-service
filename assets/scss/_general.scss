@@ -1,7 +1,5 @@
 @import "./size";
 @import "./color";
-@import "./components/topbar";
-@import "./components/footer";
 
 * {
   box-sizing: border-box;
@@ -166,3 +164,6 @@ a {
     text-shadow: inherit;
   }
 }
+
+@import "./components/topbar";
+@import "./components/footer";

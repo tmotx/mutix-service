@@ -56,8 +56,8 @@
   background: center no-repeat;
   background-size: contain;
 
-  &.gallery {
-    background-image: url("~/assets/images/floor-plan/gallery.png");
+  &.multifunction {
+    background-image: url("~/assets/images/floor-plan/multifunction.png");
   }
 
   &.co-working {
@@ -80,33 +80,33 @@
     height: 100px;
   }
 
-  &.gallery-stair {
+  &.multifunction-stair {
     left: 27%;
     bottom: 20%;
-    background-image: url("~/assets/images/floor-plan/gallery-stair.png");
+    background-image: url("~/assets/images/floor-plan/multifunction-stair.png");
   }
 
-  &.gallery-meeting {
+  &.multifunction-meeting {
     left: 32.5%;
     bottom: 42%;
 
     [data-meeting="1"] & {
-      background-image: url("~/assets/images/floor-plan/gallery-meeting-1.png");
+      background-image: url("~/assets/images/floor-plan/multifunction-meeting-1.png");
     }
     [data-meeting="2"] & {
-      background-image: url("~/assets/images/floor-plan/gallery-meeting-2.png");
+      background-image: url("~/assets/images/floor-plan/multifunction-meeting-2.png");
     }
   }
 
-  &.gallery-space {
+  &.multifunction-space {
     left: 70%;
     bottom: 55%;
 
     [data-space="1"] & {
-      background-image: url("~/assets/images/floor-plan/gallery-space-1.png");
+      background-image: url("~/assets/images/floor-plan/multifunction-space-1.png");
     }
     [data-space="2"] & {
-      background-image: url("~/assets/images/floor-plan/gallery-space-2.png");
+      background-image: url("~/assets/images/floor-plan/multifunction-space-2.png");
     }
   }
 
@@ -142,13 +142,13 @@
     opacity: 1;
   }
 
-  &.gallery-space {
+  &.multifunction-space {
     width: 40%;
     top: 21%;
     right: 7.5%;
   }
 
-  &.gallery-meeting {
+  &.multifunction-meeting {
     width: 4.2%;
     top: 47%;
     left: 30.4%;
