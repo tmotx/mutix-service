@@ -36,11 +36,12 @@
     margin: 0 0 0 10px;
   }
 
-  .package &[data-slide="package"],
-  .translate &[data-slide="translate"],
-  .live-stream &[data-slide="live-stream"],
-  .transcript &[data-slide="transcript"],
-  .internet &[data-slide="internet"] {
+  .service-slide[data-slide="package"] &[data-slide="package"],
+  .service-slide[data-slide="translate"] &[data-slide="translate"],
+  .service-slide[data-slide="live-stream"] &[data-slide="live-stream"],
+  .service-slide[data-slide="transcript"] &[data-slide="transcript"],
+  .service-slide[data-slide="internet"] &[data-slide="internet"],
+  .service-slide[data-slide="remote"] &[data-slide="remote"] {
     width: 110px;
     opacity: 1;
   }
@@ -48,11 +49,12 @@
   @media (min-width: $screen-md) {
     width: 16%;
 
-    .package &[data-slide="package"],
-    .translate &[data-slide="translate"],
-    .live-stream &[data-slide="live-stream"],
-    .transcript &[data-slide="transcript"],
-    .internet &[data-slide="internet"] {
+    .service-slide[data-slide="package"] &[data-slide="package"],
+    .service-slide[data-slide="translate"] &[data-slide="translate"],
+    .service-slide[data-slide="live-stream"] &[data-slide="live-stream"],
+    .service-slide[data-slide="transcript"] &[data-slide="transcript"],
+    .service-slide[data-slide="internet"] &[data-slide="internet"],
+    .service-slide[data-slide="remote"] &[data-slide="remote"] {
       width: 18%;
     }
   }
@@ -87,11 +89,12 @@
   opacity: 0;
   transition: opacity 0.5s;
 
-  .package &[data-slide="package"],
-  .translate &[data-slide="translate"],
-  .live-stream &[data-slide="live-stream"],
-  .transcript &[data-slide="transcript"],
-  .internet &[data-slide="internet"] {
+  .service-slide[data-slide="package"] &[data-slide="package"],
+  .service-slide[data-slide="translate"] &[data-slide="translate"],
+  .service-slide[data-slide="live-stream"] &[data-slide="live-stream"],
+  .service-slide[data-slide="transcript"] &[data-slide="transcript"],
+  .service-slide[data-slide="internet"] &[data-slide="internet"],
+  .service-slide[data-slide="remote"] &[data-slide="remote"] {
     opacity: 1;
     transition: opacity 0.5s 0.3s;
   }
@@ -107,11 +110,12 @@
     object-fit: cover;
   }
 
-  .package &.multi-images[data-slide="package"] img,
-  .translate &.multi-images[data-slide="translate"] img,
-  .live-stream &.multi-images[data-slide="live-stream"] img,
-  .transcript &.multi-images[data-slide="transcript"] img,
-  .internet &.multi-images[data-slide="internet"] img {
+  .service-slide[data-slide="package"] &.multi-images[data-slide="package"] img,
+  .service-slide[data-slide="translate"] &.multi-images[data-slide="translate"] img,
+  .service-slide[data-slide="live-stream"] &.multi-images[data-slide="live-stream"] img,
+  .service-slide[data-slide="transcript"] &.multi-images[data-slide="transcript"] img,
+  .service-slide[data-slide="internet"] &.multi-images[data-slide="internet"] img,
+  .service-slide[data-slide="remote"] &.multi-images[data-slide="remote"] img {
     animation: fade 6s linear alternate infinite;
 
     & + img {
