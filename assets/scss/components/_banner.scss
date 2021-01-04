@@ -3,8 +3,12 @@
 .banner {
   position: relative;
   min-height: calc(100vh - 50px);
-  background: center no-repeat;
+  background: #1a384d center no-repeat;
   background-size: cover;
+
+  @media (min-width: $screen-md) {
+    min-height: calc(100vw * 600 / 1280);
+  }
 
   &.banner-mask::before {
     content: "";
@@ -15,19 +19,21 @@
     right: 0;
     background: rgba(0, 0, 0, 0.2);
   }
-}
 
-.banner-index {
-  position: relative;
-  background: #1a384d url("~/assets/images/banner-img-sm.jpg") center no-repeat;
-  background-size: cover;
+  &.banner--index {
+    background-image: url("~/assets/images/banner/index-sm.jpg");
 
-  @media (min-width: $screen-md) {
-    background-image: url("~/assets/images/banner-img-md.jpg");
+    @media (min-width: $screen-md) {
+      background-image: url("~/assets/images/banner/index-md.jpg");
+    }
   }
 
-  @media (min-width: $screen-md) {
-    min-height: calc(100vw * 600 / 1280);
+  &.banner--1f {
+    background-image: url("~/assets/images/banner/multifunctional.jpg");
+  }
+
+  &.banner--2f {
+    background-image: url("~/assets/images/banner/co-working-space.jpg");
   }
 }
 
@@ -63,7 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("~/assets/images/banner-service.jpg");
+  background-image: url("~/assets/images/banner/service.jpg");
 
   @media (min-width: $screen-md) {
     min-height: calc(100vw * 1200 / 2560);

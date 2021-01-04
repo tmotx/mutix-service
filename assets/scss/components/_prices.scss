@@ -2,16 +2,13 @@
 @import "./color";
 
 .prices {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   padding: 50px 0;
 
   @media (min-width: $screen-md) {
+    flex-direction: row;
     padding: 50px 0;
-  }
-
-  @media (min-width: $screen-xl) {
-    padding: 50px 35px;
-    grid-template-columns: 1fr 320px;
   }
 
   .title {
@@ -23,11 +20,6 @@
       padding-bottom: 0;
     }
 
-    @media (min-width: $screen-xl) {
-      margin: 10px 0 0;
-      padding: 0;
-    }
-
     small {
       display: inline-block;
       margin: 0 0 0 10px;
@@ -37,134 +29,8 @@
       @media (min-width: $screen-md) {
         width: 0;
         margin: 0;
-        transform: translate(1em, 0);
-      }
-
-      @media (min-width: $screen-xl) {
-        width: auto;
-        margin: 0 0 0 10px;
-        transform: none;
       }
     }
-  }
-}
-
-.price-floor-plan {
-  position: relative;
-  width: 100%;
-  padding: 0 0 75%;
-  background: center no-repeat;
-  background-size: contain;
-
-  &.multifunction {
-    background-image: url("~/assets/images/floor-plan/multifunction.png");
-  }
-
-  &.co-working {
-    background-image: url("~/assets/images/floor-plan/co-working.png");
-  }
-}
-
-.floor-plan-button {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, 0);
-  background: center no-repeat;
-  background-size: contain;
-  animation: bounce 0.8s infinite both;
-  cursor: pointer;
-
-  @media (min-width: $screen-md) {
-    width: 100px;
-    height: 100px;
-  }
-
-  &.multifunction-stair {
-    left: 27%;
-    bottom: 20%;
-    background-image: url("~/assets/images/floor-plan/multifunction-stair.png");
-  }
-
-  &.multifunction-meeting {
-    left: 32.5%;
-    bottom: 42%;
-
-    [data-meeting="1"] & {
-      background-image: url("~/assets/images/floor-plan/multifunction-meeting-1.png");
-    }
-    [data-meeting="2"] & {
-      background-image: url("~/assets/images/floor-plan/multifunction-meeting-2.png");
-    }
-  }
-
-  &.multifunction-space {
-    left: 70%;
-    bottom: 55%;
-
-    [data-space="1"] & {
-      background-image: url("~/assets/images/floor-plan/multifunction-space-1.png");
-    }
-    [data-space="2"] & {
-      background-image: url("~/assets/images/floor-plan/multifunction-space-2.png");
-    }
-  }
-
-  &.co-working-stair {
-    left: 76.7%;
-    bottom: 59.5%;
-    background-image: url("~/assets/images/floor-plan/co-working-stair.png");
-  }
-
-  &.co-working-office {
-    background-image: url("~/assets/images/floor-plan/co-working-office.png");
-
-    &[data-switch="office1"] {
-      left: 20.2%;
-      bottom: 58%;
-    }
-    &[data-switch="office2"] {
-      left: 57.6%;
-      bottom: 65%;
-    }
-  }
-}
-
-.floor-plan-object {
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.3s;
-
-  [data-meeting="2"] &[data-meeting="2"],
-  [data-space="2"] &[data-space="2"],
-  [data-office1="2"] &[data-office1="2"],
-  [data-office2="2"] &[data-office2="2"] {
-    opacity: 1;
-  }
-
-  &.multifunction-space {
-    width: 40%;
-    top: 21%;
-    right: 7.5%;
-  }
-
-  &.multifunction-meeting {
-    width: 4.2%;
-    top: 47%;
-    left: 30.4%;
-  }
-
-  &.co-working-office[data-office1="2"] {
-    width: 13.6%;
-    top: 36.6%;
-    left: 19.8%;
-    transform: rotate(-90deg);
-  }
-
-  &.co-working-office[data-office2="2"] {
-    width: 13.7%;
-    top: 37.3%;
-    left: 51.1%;
   }
 }
 
@@ -173,28 +39,35 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $screen-xl) {
-    padding: 0 0 0 20px;
+  .title {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+
+    @media (min-width: $screen-md) {
+      margin: 0;
+      align-self: center;
+      text-align: center;
+    }
   }
 }
 
 .price-main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: $screen-md) {
-    justify-content: center;
     flex-direction: row;
-  }
-
-  @media (min-width: $screen-xl) {
-    flex-direction: column;
   }
 }
 
 .price {
   display: flex;
   flex-direction: column;
+  width: 90%;
+  max-width: 400px;
   margin: 0 0 20px;
   color: $gray-light;
   font-size: 15px;
@@ -204,11 +77,6 @@
   @media (min-width: $screen-md) {
     width: 50%;
     margin: 50px 15px 0;
-  }
-
-  @media (min-width: $screen-xl) {
-    width: auto;
-    margin: 20px 0 0;
   }
 
   .text-title {
@@ -261,26 +129,4 @@
 
 .price-note {
   font-size: 10px;
-}
-
-@keyframes bounce {
-  0%, 20%, 53%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  40%, 43% {
-    transform: translate(-50%, -20px);
-  }
-
-  40%, 43%, 70% {
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  }
-
-  70% {
-    transform: translate(-50%, -10px);
-  }
-
-  90% {
-    transform: translate(-50%, -4px);
-  }
 }
