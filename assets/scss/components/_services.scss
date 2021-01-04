@@ -16,6 +16,10 @@
   max-width: 1280px;
   margin: 0 auto;
 
+  @media (min-width: $screen-md) {
+    justify-content: center;
+  }
+
   @media (min-width: $screen-lg) {
     padding: 0 120px;
   }
@@ -57,12 +61,16 @@
   background: center top no-repeat;
   background-size: 100px;
 
-  &.service-image-1f {
-    background-image: url("~/assets/images/icon-services-1f.png");
+  &.service-image-1f-1 {
+    background-image: url("~/assets/images/service-icon/1f-1.png");
+  }
+
+  &.service-image-1f-2 {
+    background-image: url("~/assets/images/service-icon/1f-2.png");
   }
 
   &.service-image-2f {
-    background-image: url("~/assets/images/icon-services-2f.png");
+    background-image: url("~/assets/images/service-icon/2f.png");
   }
 }
 

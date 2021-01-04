@@ -167,7 +167,7 @@
     padding: 30px 35px;
   }
 
-  &.price-footer {
+  &.price__footer {
     flex-grow: 0;
     min-height: 230px;
     box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.3);
@@ -233,8 +233,6 @@
       pointer-events: none;
     }
 
-    // @media (min-width: $screen-md) { [data-price="3"] & { opacity: 0; pointer-events: none; } }
-    // @media (min-width: $screen-lg) { [data-price="3"] & { opacity: 0; pointer-events: none; } }
     @media (min-width: $screen-xl) {
       opacity: 0;
       pointer-events: none;
