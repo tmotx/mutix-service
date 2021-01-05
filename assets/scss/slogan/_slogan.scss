@@ -14,14 +14,14 @@
   align-items: center;
   justify-content: center;
   height: 300px;
-  background: #D8D8D8;
 
   @media (min-width: $screen-md) {
-    width: 600px;
+    width: 60%;
+    max-width: 600px;
   }
 
   img {
-    height: 240px;
+    max-height: 240px;
   }
 }
 
