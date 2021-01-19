@@ -42,9 +42,10 @@ img.showcase {
 }
 
 .main-title {
-  margin: 0;
+  margin: 0 0 5px;
 
   @media (min-width: $screen-md) {
+    margin: 0;
     padding-top: 10px;
     text-align: center;
   }
@@ -60,16 +61,24 @@ img.showcase {
 }
 
 .btn-more {
-  display: block;
-  width: 104px;
-  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 104px;
+  min-height: 48px;
+  padding: 5px 10px;
   border-radius: 30px;
   border: solid 2px $white;
   text-align: center;
-  line-height: 48px;
+  line-height: 1.2;
   justify-self: flex-start;
   align-self: center;
-  margin: 0 20px;
+  margin: 0 20px 0 0;
+
+  @media (min-width: 360px) {
+    margin: 0 20px;
+  }
+
   @media (min-width: $screen-md) {
     width: 130px;
     height: 60px;

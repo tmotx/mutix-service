@@ -10,7 +10,7 @@
     min-height: calc(100vw * 600 / 1280);
   }
 
-  &.banner-mask::before {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -34,6 +34,10 @@
 
   &.banner--2f {
     background-image: url("~/assets/images/banner/co-working-space.jpg");
+  }
+
+  &.banner-service {
+    background-image: url("~/assets/images/banner/service.jpg");
   }
 }
 
@@ -62,24 +66,5 @@
   .text-description {
     margin-bottom: 0;
     max-width: 410px;
-  }
-}
-
-.banner-service {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("~/assets/images/banner/service.jpg");
-
-  @media (min-width: $screen-md) {
-    min-height: calc(100vw * 1200 / 2560);
-  }
-}
-
-.hero-text {
-  font-size: 50px;
-
-  @media (min-width: $screen-md) {
-    font-size: 60px;
   }
 }
