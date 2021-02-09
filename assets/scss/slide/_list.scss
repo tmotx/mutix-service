@@ -37,6 +37,13 @@
       pointer-events: none;
     }
   }
+
+  &.slide-list__button--limit-2 {
+    [data-active="2"] & {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 }
 
 .slide {
