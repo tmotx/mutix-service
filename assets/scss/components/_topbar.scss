@@ -104,6 +104,7 @@
   height: 40px;
   font-size: 0;
   cursor: pointer;
+  will-change: top;
 
   &::before,
   &::after {
@@ -147,23 +148,20 @@
 }
 
 .header-menu {
-  max-height: 0;
   opacity: 0;
   padding: 20px 0 10px;
   pointer-events: none;
-  transition: max-height 0s 0.3s, opacity 0.1s 0.06s;
+  transition: opacity 0.1s 0.06s;
 
   #menu-control:checked + .container & {
-    max-height: 290px;
     opacity: 1;
     pointer-events: auto;
-    transition: max-height 0s, opacity 0.3s 0.1s;
+    transition: opacity 0.3s 0.1s;
   }
 
   @media (min-width: $screen-md) {
     position: relative;
     top: 0;
-    max-height: auto;
     padding: 0;
     background-color: $black;
     opacity: 1;

@@ -5,8 +5,6 @@
     const _container = _button.closest(".slide-list");
     const active = parseInt(_container.dataset.active, 10);
     const direction = parseInt(_button.dataset.direction, 10);
-
-    console.log(_button, _container, active, direction);
     _container.dataset.active = active + direction;
   }
 
